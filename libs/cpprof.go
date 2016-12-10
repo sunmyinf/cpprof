@@ -10,7 +10,7 @@ package cpprof
 void use_system(void) {
 	char command[MAX_STRING];
 
-	sprintf(command, "grep VmHWM /proc/%d/status", getpid());
+	sprintf(command, "/proc/%d/status", getpid());
 	system(command);
 }
 */
