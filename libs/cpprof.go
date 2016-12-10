@@ -19,6 +19,10 @@ import (
   "net/http"
 )
 
+func init() {
+  http.HandleFunc("/debug/pprof/cheap", HeapProfile)
+}
+
 func HeapProfile(w http.ResponseWriter, r *http.Request) {
   C.use_system()
 }
